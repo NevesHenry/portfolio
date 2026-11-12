@@ -1,7 +1,11 @@
 export type Project = {
   slug: string;
   title: string;
-  status: "building" | "planned" | "live";
+  /**
+   * live: deployed and reachable. complete: finished, runs locally in one
+   * command and is covered by CI — but there is no public deployment.
+   */
+  status: "building" | "planned" | "complete" | "live";
   /** Card blurb on /projects. */
   description: string;
   /** Card tags — the headline technologies only. */
@@ -34,7 +38,7 @@ export const projects: Project[] = [
   {
     slug: "event-driven-microservices",
     title: "Event-driven microservices",
-    status: "live",
+    status: "complete",
     description:
       "Two Spring Boot services — orders and inventory — that talk only through RabbitMQ events. Idempotent consumers, atomic stock reservation, and dead-lettering: the same patterns I worked with in production at Axur.",
     tags: ["Spring Boot", "RabbitMQ", "Docker"],
@@ -133,7 +137,7 @@ export const projects: Project[] = [
   {
     slug: "fullstack-aws-file-vault",
     title: "Full-stack AWS file vault",
-    status: "live",
+    status: "complete",
     description:
       "A React front end uploading through a Spring Boot API into S3 — LocalStack locally, real AWS by flipping one property. The interesting parts are the storage integration and the deploy topology, not the CRUD.",
     tags: ["React", "Spring Boot", "AWS S3"],

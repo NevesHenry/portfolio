@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/projects";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Projects",
   description:
     "Hands-on builds: event-driven Spring Boot microservices over RabbitMQ, and a full-stack React + Spring Boot app backed by S3.",
-};
+  path: "/projects",
+});
 
 export default function Projects() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-20">
       <h1 className="font-display text-3xl font-semibold text-ink">Projects</h1>
       <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-        Two builds that demonstrate systems I work with day to day rather than a
-        generic tutorial clone. Both run in one command, both have integration
+        Two builds around the kind of systems I have worked on professionally
+        — event-driven services and cloud storage — rather than a generic
+        tutorial clone. Both run in one command, both have integration
         tests against real infrastructure, and each case study covers the
         failure modes I designed for — and what I deliberately left out.
       </p>

@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
+import { githubUrl, linkedinUrl, pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact",
   description:
     "Get in touch — email, LinkedIn, or GitHub. Based in São José dos Campos, Brazil.",
-};
+  path: "/contact",
+});
 
 const channels = [
   {
     label: "linkedin",
     value: "linkedin.com/in/henriquereisneves",
-    href: "https://www.linkedin.com/in/henriquereisneves/",
+    href: linkedinUrl,
   },
   {
     label: "github",
     value: "github.com/NevesHenry",
-    href: "https://github.com/NevesHenry",
+    href: githubUrl,
   },
   { label: "location", value: "São José dos Campos, BR", href: null },
 ];

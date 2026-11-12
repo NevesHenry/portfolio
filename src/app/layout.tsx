@@ -3,7 +3,13 @@ import type { ReactNode } from "react";
 import { IBM_Plex_Mono, IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { siteName, siteUrl } from "@/lib/site";
+import {
+  authorName,
+  defaultDescription,
+  defaultTitle,
+  siteName,
+  siteUrl,
+} from "@/lib/site";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -27,19 +33,19 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+// Site-wide defaults. Every page overrides these through `pageMetadata` (so
+// each one gets its own share card and canonical); they still apply as-is to
+// routes that set nothing, such as the 404 page.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Henrique Reis Neves — Software Developer",
-    template: "%s — Henrique Reis Neves",
+    default: defaultTitle,
+    template: `%s — ${authorName}`,
   },
-  description:
-    "Software developer focused on event-driven backends, full-stack apps, and cloud-native systems.",
+  description: defaultDescription,
   openGraph: {
-    title: "Henrique Reis Neves — Software Developer",
-    description:
-      "Software developer focused on event-driven backends, full-stack apps, and cloud-native systems.",
-    url: "/",
+    title: defaultTitle,
+    description: defaultDescription,
     siteName,
     locale: "en_US",
     type: "website",

@@ -1,0 +1,216 @@
+<!doctype html>
+<!--
+  Source of public/resume.pdf. Edit this file, then regenerate the PDF — see
+  "Résumé" in README.md. Single column, real text and no images, so applicant
+  tracking systems read it the same way people do.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Henrique Reis Neves — Résumé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@600;700&display=block" rel="stylesheet">
+<style>
+  @page { size: Letter; margin: 0.6in 0.7in; }
+
+  :root {
+    --ink: #1f2933;
+    --soft: #52606d;
+    --accent: #0f766e;
+    --line: #d9e2ec;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  header h1 {
+    font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  header .role { font-size: 12pt; color: var(--accent); font-weight: 500; margin-top: 2pt; }
+  header .contact { margin-top: 6pt; color: var(--soft); font-size: 9pt; }
+  header .contact span + span::before { content: "·"; margin: 0 6pt; color: var(--line); }
+  header .contact a { color: var(--ink); }
+
+  section { margin-top: 14pt; }
+
+  /* One heading style for every section. */
+  h2 {
+    font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+    font-size: 10.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 3pt;
+    margin-bottom: 7pt;
+  }
+
+  .entry { margin-bottom: 9pt; break-inside: avoid; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+  .entry-head h3 { font-size: 10.5pt; font-weight: 600; }
+  .entry-head .when { font-size: 9pt; color: var(--soft); white-space: nowrap; }
+  .entry .sub { color: var(--soft); }
+
+  ul { margin-top: 3pt; padding-left: 13pt; }
+  li { margin-top: 1.5pt; }
+  li::marker { color: var(--accent); }
+
+  .tech { margin-top: 3pt; font-size: 9pt; color: var(--soft); }
+  .tech b, .skills b { font-weight: 600; color: var(--ink); }
+
+  .skills p + p { margin-top: 3pt; }
+  .languages { display: flex; gap: 24pt; }
+  .languages .level { color: var(--soft); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Henrique Reis Neves</h1>
+  <p class="role">Software Developer</p>
+  <p class="contact">
+    <span>São José dos Campos, SP, Brazil</span>
+    <span>+55 12 99710-9909</span>
+    <span><a href="mailto:henriquereisneves@gmail.com">henriquereisneves@gmail.com</a></span>
+  </p>
+  <p class="contact">
+    <span><a href="https://www.linkedin.com/in/henriquereisneves/">linkedin.com/in/henriquereisneves</a></span>
+    <span><a href="https://github.com/NevesHenry">github.com/NevesHenry</a></span>
+    <span><a href="https://henrique-neves.vercel.app">henrique-neves.vercel.app</a></span>
+  </p>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p>
+    Software Developer focused on creating scalable, high-performance backend
+    and full-stack solutions. Solid experience in the Java ecosystem (including
+    Spring Boot), modern front-end technologies (React, Node.js, HTML, CSS,
+    JavaScript), and developing digital platforms using Adobe Experience
+    Manager (AEM). With international experience and a proactive mindset, I aim
+    to contribute to innovative projects involving large-scale systems,
+    event-driven architectures, and cloud technologies.
+  </p>
+</section>
+
+<section>
+  <h2>Work Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Software Developer · Webjump</h3>
+      <span class="when">Jan 2025 – Present</span>
+    </div>
+    <ul>
+      <li>Develop and optimize software solutions and digital experiences using Adobe Experience Manager (AEM), Edge Delivery Services, and Adobe Learning Manager.</li>
+      <li>Implement and maintain interactive, responsive applications using Java, HTML, CSS, JavaScript, React, and Node.js.</li>
+      <li>Collaborate with cross-functional teams to ensure high-performance, responsive solutions aligned with business needs.</li>
+    </ul>
+    <p class="tech"><b>Technologies:</b> AEM (Sites, Forms), Edge Delivery Services, Adobe Learning Manager, Java, HTML, CSS, JavaScript, React, Node.js</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Software Engineer Intern · Axur</h3>
+      <span class="when">Jan 2023 – Jan 2024</span>
+    </div>
+    <ul>
+      <li>Developed and maintained large-scale systems on the Java platform, focusing primarily on performance and scalability.</li>
+      <li>Implemented event-driven microservice architectures, ensuring efficient communication in distributed data processing.</li>
+      <li>Automated cloud infrastructure and deployment workflows (AWS, Jenkins), promoting higher reliability and CI/CD best practices.</li>
+    </ul>
+    <p class="tech"><b>Technologies:</b> Java, Microservices, Event-driven Architecture, AWS, Jenkins</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Cashier and Merchandiser · Shoppers Drug Mart (UBC Vancouver)</h3>
+      <span class="when">Mid 2019 – Early 2022</span>
+    </div>
+    <ul>
+      <li>Provided customer service in a dynamic, multicultural environment, enhancing English fluency and interpersonal communication.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Centro Universitário ETEP, São José dos Campos, Brazil</h3>
+      <span class="when">2023 – 2026</span>
+    </div>
+    <p class="sub">Software Engineering (completed)</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Langara College, Vancouver BC, Canada</h3>
+      <span class="when">2018 – 2022</span>
+    </div>
+    <p class="sub">Associate of Science Degree in Computer Science</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Universidade Estadual Paulista (UNESP), Guaratinguetá, Brazil</h3>
+      <span class="when">2017 – 2018</span>
+    </div>
+    <p class="sub">Mechanical Engineering</p>
+  </div>
+</section>
+
+<section>
+  <h2>Volunteer Work</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Team Member · UNESP BAJA SAE</h3>
+      <span class="when">Aug 2016 – Dec 2016</span>
+    </div>
+    <p>Assisted in coordinating weekly meetings and tracking activities and deliverables for the engineering team.</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <h3>Academic Event Organizer · Langara College</h3>
+    </div>
+    <p>Managed capacity and access compliance (ID verification) in a controlled area during a student festival.</p>
+  </div>
+</section>
+
+<section class="skills">
+  <h2>Skills</h2>
+  <p><b>Programming Languages &amp; Frameworks:</b> Java, Python, C++, Bash, HTML, CSS, JavaScript, React, Node.js, Java Spring (Spring Boot)</p>
+  <p><b>Technologies &amp; Tools:</b> AWS, Docker, Microservices, Event-driven Architecture (RabbitMQ), Relational Databases, Unix, Git, Jenkins, Datadog</p>
+  <p><b>Adobe Ecosystem:</b> Adobe Experience Manager (AEM Sites, AEM Forms), Edge Delivery Services, Adobe Learning Manager</p>
+  <p><b>Soft Skills:</b> Self-management, effective communication, teamwork, and quick adaptation to new technologies</p>
+</section>
+
+<section>
+  <h2>Languages</h2>
+  <p class="languages">
+    <span>Portuguese <span class="level">(Native)</span></span>
+    <span>English <span class="level">(Fluent)</span></span>
+    <span>Spanish <span class="level">(Intermediate)</span></span>
+  </p>
+</section>
+
+</body>
+</html>

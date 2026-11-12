@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 import Tag from "@/components/Tag";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
     "Java/Spring Boot developer with React and cloud experience, currently building digital experiences with AEM at Webjump.",
-};
+  path: "/about",
+});
 
 const skillGroups: { label: string; items: string[] }[] = [
   { label: "languages", items: ["Java", "Python", "C++", "JavaScript", "TypeScript"] },
   { label: "backend", items: ["Spring Boot", "Node.js", "Microservices", "RabbitMQ"] },
   { label: "cloud & infra", items: ["AWS", "Docker", "Jenkins", "Datadog"] },
   { label: "frontend", items: ["React", "HTML", "CSS"] },
-  { label: "adobe", items: ["AEM Sites", "AEM Forms", "AEM Edge Delivery"] },
+  { label: "adobe", items: ["AEM Sites", "AEM Forms", "Edge Delivery Services", "Adobe Learning Manager"] },
   { label: "spoken", items: ["English (fluent)", "Portuguese (native)", "Spanish (intermediate)"] },
 ];
 
@@ -30,9 +32,9 @@ export default function About() {
       </p>
 
       <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-        Before software, I spent time studying computer science in Vancouver,
-        Canada — where a couple of years in customer-facing retail work
-        sharpened my English and my patience in equal measure.
+        I studied computer science at Langara College in Vancouver, Canada,
+        and worked customer-facing retail alongside it — a couple of years
+        that sharpened my English and my patience in equal measure.
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2">

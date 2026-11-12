@@ -1,5 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Tag from "@/components/Tag";
+import {
+  authorName,
+  defaultDescription,
+  githubUrl,
+  linkedinUrl,
+  pageMetadata,
+  siteUrl,
+} from "@/lib/site";
+
+export const metadata: Metadata = pageMetadata({
+  description: defaultDescription,
+  path: "/",
+});
 
 const stack = [
   "Java",
@@ -11,9 +25,35 @@ const stack = [
   "AEM",
 ];
 
+// schema.org Person: lets search engines tie this site, the LinkedIn profile
+// and the GitHub account to the same person.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: authorName,
+  url: siteUrl,
+  jobTitle: "Software Developer",
+  worksFor: { "@type": "Organization", name: "Webjump" },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "São José dos Campos",
+    addressRegion: "SP",
+    addressCountry: "BR",
+  },
+  sameAs: [linkedinUrl, githubUrl],
+  knowsAbout: stack,
+};
+
 export default function Home() {
   return (
     <section className="mx-auto flex max-w-3xl flex-col gap-8 px-6 py-20 sm:min-h-[70vh] sm:justify-center sm:py-28">
+      <script
+        type="application/ld+json"
+        // Escaping "<" keeps the payload from ever closing the script tag.
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <p className="font-mono text-sm text-ink-soft">
         software developer ·{" "}
         <span className="whitespace-nowrap">são josé dos campos, br</span>
@@ -47,7 +87,7 @@ export default function Home() {
         </Link>
         <a
           href="/resume.pdf"
-          download
+          download="Henrique-Reis-Neves-Resume.pdf"
           className="rounded-sm border border-line px-5 py-2.5 font-mono text-sm text-ink transition-colors hover:border-ink-soft"
         >
           download résumé

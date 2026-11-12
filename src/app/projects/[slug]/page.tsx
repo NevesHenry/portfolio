@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Tag from "@/components/Tag";
 import StatusFlag from "@/components/StatusFlag";
 import { getProject, projects } from "@/lib/projects";
+import { pageMetadata } from "@/lib/site";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -17,11 +18,11 @@ export async function generateMetadata(
 
   if (!project) return {};
 
-  return {
+  return pageMetadata({
     title: project.title,
     description: project.caseStudy.tagline,
-    alternates: { canonical: `/projects/${project.slug}` },
-  };
+    path: `/projects/${project.slug}`,
+  });
 }
 
 export default async function CaseStudy(props: PageProps<"/projects/[slug]">) {

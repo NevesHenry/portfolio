@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import TimelineItem from "@/components/TimelineItem";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Experience",
   description:
     "Software developer at Webjump (AEM, Java, React); previously event-driven microservices and AWS at Axur.",
-};
+  path: "/experience",
+});
 
 const roles = [
   {
@@ -30,7 +32,7 @@ const roles = [
 ];
 
 const education = [
-  { period: "2023 — 2026", school: "Centro Universitário ETEP", detail: "Software Engineering" },
+  { period: "2023 — 2026", school: "Centro Universitário ETEP", detail: "Software Engineering (completed)" },
   { period: "2018 — 2022", school: "Langara College, Vancouver", detail: "A.Sc. Computer Science" },
   { period: "2017 — 2018", school: "UNESP, Guaratinguetá", detail: "Mechanical Engineering" },
 ];

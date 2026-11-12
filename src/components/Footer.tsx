@@ -1,11 +1,12 @@
-export default function Footer() {
-  const year = new Date().getFullYear();
+import CurrentYear from "./CurrentYear";
+import { authorName } from "@/lib/site";
 
+export default function Footer() {
   return (
     <footer className="border-t border-line">
       <div className="mx-auto flex max-w-3xl flex-col gap-2 px-6 py-8 text-sm text-ink-faint sm:flex-row sm:items-center sm:justify-between">
         <p className="font-mono">
-          © {year} Henrique Reis Neves —{" "}
+          © <CurrentYear buildYear={new Date().getFullYear()} /> {authorName} —{" "}
           <span className="whitespace-nowrap">built with Next.js</span>
         </p>
         <p className="font-mono">

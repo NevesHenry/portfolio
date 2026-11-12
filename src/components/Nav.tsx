@@ -24,7 +24,7 @@ export default function Nav() {
           href="/"
           className="inline-block w-fit py-2 font-mono text-sm text-ink transition-colors hover:text-accent"
         >
-          henrique<span className="text-accent">.dev</span>
+          henrique<span className="text-accent">-neves</span>
         </Link>
         <ul className="flex flex-wrap items-center gap-x-5">
           {links.map((link) => {
